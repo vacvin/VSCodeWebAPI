@@ -2,40 +2,31 @@ window.onload = function () {
     this.app = new Vue({
         el: '#app',
         data: {
-            users: "wait loading."
+            users: "wait loading.",
+            ID: ''
+        },
+        methods: {
+            QueryUser: function (event) {
+                $.ajax({
+                    context: this,
+                    url: 'http://localhost:5000/api/user/' + event.target.value,
+                    success: function(res){
+                        this.users = [];
+                        this.users.push(res);
+                    }
+                });
+            },
+            QueryUserAll: function (event) {
+                $.ajax({
+                    context: this,
+                    url: 'http://localhost:5000/api/user',
+                    success: function(res){
+                        this.users = res;
+                    }
+                });
+            }
         }
     })
 
-    this.UserController = new UserController();
-
-    this.ShowUserLsit = function(){
-        var _UserData = this.UserController.getUserData();
-        app.users = _UserData;        
-    }
-    
-    this.UserController.getUsers(this.ShowUserLsit);
-    
-    Vue.component('user-item', {
-        props: ['user'],
-        template: '<div>{{ user.name }}</div><div>{{ user.birthday }}</div>'
-    })
-}
-
-UserController = function () {
-    this.UserData;
-    
-    this.getUsers = function (callback) {
-        $.ajax({
-            context: this,
-            url: 'http://localhost:5000/api/user',
-            success: function(res){
-                this.UserData = res;
-                callback();
-            }
-        });
-    }
-
-    this.getUserData = function () {
-        return this.UserData;
-    }
+    this.app.QueryUserAll();
 }
