@@ -1,0 +1,29 @@
+.cell
+{
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #acc5db;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    background-color: #d8e8fa;
+}
+
+.header
+{
+    background-color: #afd0f7;
+}
+
+.w80
+{
+    width: 80px;
+}
+
+.w160
+{
+    width: 160px;
+}
+
+.w240
+{
+    width: 240px;
+}

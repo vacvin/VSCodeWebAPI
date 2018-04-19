@@ -13,7 +13,12 @@ window.onload = function () {
         app.users = _UserData;        
     }
     
-    this.UserController.getUsers(this.ShowUserLsit);    
+    this.UserController.getUsers(this.ShowUserLsit);
+    
+    Vue.component('user-item', {
+        props: ['user'],
+        template: '<div>{{ user.name }}</div><div>{{ user.birthday }}</div>'
+    })
 }
 
 UserController = function () {
