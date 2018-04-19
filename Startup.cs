@@ -25,8 +25,10 @@ namespace VSCodeWebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<UserDataContext>(opt => opt.UseInMemoryDatabase("UserData"));
             services.AddMvc();
+
+            services.AddDbContext<UserDataContext>(options =>            
+                  options.UseSqlite("Data Source=Db/UserData.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
