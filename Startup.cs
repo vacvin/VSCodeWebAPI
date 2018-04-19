@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using VSCodeWebAPI.models;
+using System.IO;
+using Microsoft.Extensions.FileProviders;
 
 namespace VSCodeWebAPI
 {
@@ -40,6 +42,27 @@ namespace VSCodeWebAPI
             }
 
             app.UseMvc();
+    
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "js")),
+                RequestPath = "/js"
+            });
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "images")),
+                RequestPath = "/images"
+            });
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "css")),
+                RequestPath = "/css"
+            });
         }
     }
 }
