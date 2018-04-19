@@ -1,0 +1,10 @@
+D:\MyGitHub\VSCodeWebAPI\bin\Debug\netcoreapp2.0\VSCodeWebAPI.deps.json
+D:\MyGitHub\VSCodeWebAPI\bin\Debug\netcoreapp2.0\VSCodeWebAPI.runtimeconfig.json
+D:\MyGitHub\VSCodeWebAPI\bin\Debug\netcoreapp2.0\VSCodeWebAPI.runtimeconfig.dev.json
+D:\MyGitHub\VSCodeWebAPI\bin\Debug\netcoreapp2.0\VSCodeWebAPI.dll
+D:\MyGitHub\VSCodeWebAPI\bin\Debug\netcoreapp2.0\VSCodeWebAPI.pdb
+D:\MyGitHub\VSCodeWebAPI\obj\Debug\netcoreapp2.0\VSCodeWebAPI.csproj.CoreCompileInputs.cache
+D:\MyGitHub\VSCodeWebAPI\obj\Debug\netcoreapp2.0\VSCodeWebAPI.AssemblyInfoInputs.cache
+D:\MyGitHub\VSCodeWebAPI\obj\Debug\netcoreapp2.0\VSCodeWebAPI.AssemblyInfo.cs
+D:\MyGitHub\VSCodeWebAPI\obj\Debug\netcoreapp2.0\VSCodeWebAPI.dll
+D:\MyGitHub\VSCodeWebAPI\obj\Debug\netcoreapp2.0\VSCodeWebAPI.pdb
