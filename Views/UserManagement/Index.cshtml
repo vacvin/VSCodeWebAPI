@@ -17,10 +17,12 @@
     <div id="app">
         User List:<br/>
         Query By ID:<input v-model="ID" v-on:keyup="QueryUser"><br/>
-        <div><div class="header cell w20">ID</div><div class="header cell w80">Name</div><div class="header cell w160">Birthday</div><div class="header cell w240">CreateTime</div><div class="header cell w80">Delete</div></div>
-        <div v-for="user in users">
-            <div class="cell w20">{{ user.id }}</div><div class="cell w80">{{ user.name }}</div><div class="cell w160">{{ user.birthday }}</div><div class="cell w240">{{ user.createTime }}</div><div class="cell w80"><button v-on:click="deleteUser(user.id)">Delete</button></div>
-        </div>
+        <userlist-header></userlist-header>
+        <userlist
+            v-for="user in users"
+            v-bind:user="user"
+            v-bind:key="user.id">
+        </userlist>       
         <div>
             <div>
                 <div class="input">Name</div><div class="input"><input v-model="name"></div>
@@ -31,7 +33,7 @@
             <div>
                 <button class="input" v-on:click="addUser">Add User</button>
             </div>
-        </div>
+        </div>        
     </div>
 </body>
 </html>
