@@ -6,11 +6,19 @@
     margin-bottom: -1px;
     margin-right: -1px;
     background-color: #d8e8fa;
+    height: 22px;
 }
 
 .header
 {
     background-color: #afd0f7;
+}
+
+.input
+{
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 .w20
